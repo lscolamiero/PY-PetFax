@@ -6,9 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 style="color: #7a24d0">Welcome to PetFax</h1>
+    <h1 style="color: #683798">Welcome to PetFax</h1>
     {% for pet in pets %}
-        <h2>{{ pet.pet_name }}</h2>
+        <a href="http://localhost:5000/pets/{{ pet.pet_id }}">
+            <h2>{{ pet.pet_name }}</h2>
+        </a>
         <img src="{{ pet.pet_photo }}" alt="{{ pet.pet_name }}">
     {% endfor %}
 </body>
