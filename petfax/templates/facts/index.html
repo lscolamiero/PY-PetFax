@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}All Facts{% endblock %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+{% block body %}
+<h1>UserFax</h1>
+{% for fact in facts %}
+    <div class="container">
+        <h4>Submitted by {{ fact.submitter }}</h4>
+        <p>{{ fact.fact }}</p>
+    </div>
+{% endfor %}
+{% endblock %}
